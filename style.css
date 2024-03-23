@@ -1,0 +1,19 @@
+body{
+    margin: auto;
+    width: 600px;
+    background-color: #76b0c9;
+    
+}
+.mainDiv{
+    margin:auto;
+}
+.bottom{
+    margin: 30px 0px 20px 170px;
+}
+h1{
+    text-align: center;
+    color: rgb(159, 65, 143);
+}
+input{
+    width:200px;
+}
