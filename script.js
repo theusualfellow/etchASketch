@@ -1,23 +1,21 @@
 const body= document.querySelector('body')
-const mainDiv = document.createElement('div')
+const mainDiv = document.querySelector('.mainDiv')
 const button = document.createElement('button')
-button.innerText="click to change amt of boxes"
-body.appendChild(button)
+button.innerText="apply"
+const bottom=document.querySelector(".bottom")
+
+
+bottom.appendChild(button)
 let boxes=16
 makeboxes(16); 
 
 
 button.addEventListener("click", ()=>{
     mainDiv.innerHTML=''
-    body.appendChild(button)
-    const amount = window.prompt("enter the amount of boxes you want")
-    if(amount>100 || isNaN(amount)==true){
-        window.alert("invalid")
-        makeboxes(16)
-    }
+    const amount=document.querySelector("#amount").value
     makeboxes(amount)
+    console.log(amount)
 })
-
 
 function makeboxes(boxes){
     for(let i=0;i<boxes; i++){
@@ -38,13 +36,13 @@ function makeboxes(boxes){
             const divChild = document.createElement('div');
             divContainer.appendChild(divChild)
             divChild.className="divChild"
-            divChild.style.backgroundColor="red";
+            divChild.style.backgroundColor="#614046";
             divChild.style.height=`${heightChild}px`
             divChild.style.width=`${widthChild}px`
     
             //making sure the child divs being added listens to mouse hovers
             divChild.addEventListener("mouseover",()=>{
-                divChild.style.backgroundColor="blue";
+                divChild.style.backgroundColor="#e78d9e";
                 
             })
         divContainer.style.height=`${heightChild}px`
@@ -55,7 +53,7 @@ function makeboxes(boxes){
         mainDiv.style.width=width
         mainDiv.style.display="flex"
         mainDiv.style.flexDirection="column"
-        body.appendChild(mainDiv)
+       
         
     }
     
